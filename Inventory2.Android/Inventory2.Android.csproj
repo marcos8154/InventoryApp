@@ -84,7 +84,14 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bin.png" />
+    <AndroidResource Include="Resources\drawable\engrenagem.png" />
+    <AndroidResource Include="Resources\drawable\importar.png" />
+    <AndroidResource Include="Resources\drawable\prateleira.png" />
+    <AndroidResource Include="Resources\drawable\qr.png" />
+    <AndroidResource Include="Resources\drawable\warehouse.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Inventory2\Inventory2.csproj">
       <Project>{89D30E48-1CC2-4896-8E4A-6936EC0BAAE5}</Project>

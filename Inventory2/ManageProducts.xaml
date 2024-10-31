@@ -1,11 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              Title="Manage Products"
+             Title="Manage Products"
              x:Class="Inventory2.ManageProducts">
     <ContentPage.Content>
         <StackLayout>
-           
+            <StackLayout Orientation="Horizontal">
+                <Entry x:Name="entrySearch" Placeholder="Search products..." HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="btnSearch" Clicked="btnSearch_Clicked" Text="Search" HorizontalOptions="End"/>
+            </StackLayout>
+            <StackLayout>
+                <Label x:Name="lbProducts" Text="Products: 0"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <ListView x:Name="ProductListView" RowHeight="60" ItemAppearing="OnItemAppearing" IsPullToRefreshEnabled="True" SeparatorVisibility="Default" SeparatorColor="#000000">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical" Padding="5" VerticalOptions="Center" >
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding ProductId}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Description}"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout HorizontalOptions="StartAndExpand">
+                                            <Label Text="{Binding SKU}"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                                <Image Source="warehouse.png" WidthRequest="20" HeightRequest="20"/>
+                                                <Label Text="48"/>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                                <Image Source="prateleira.png" WidthRequest="20" HeightRequest="20"/>
+                                                <Label Text="14K"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

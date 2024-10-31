@@ -4,9 +4,7 @@
              Title="Inventory App"
              Appearing="ContentPage_Appearing"
              x:Class="Inventory2.MainPage">
-
-    <StackLayout >
-  
+    <StackLayout>
         <ListView x:Name="ListMenu" RowHeight="150" ItemSelected="ListMenu_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -14,7 +12,7 @@
                         <StackLayout Orientation="Horizontal" VerticalOptions="Center">
                             <Image Source="{Binding Icon}" WidthRequest="70" HeightRequest="70" Margin="20, 0, 20, 0"/>
                             <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
-                                <Label FontAttributes="Bold" FontSize="18" TextColor="#000000" Text="{Binding Title}"/>
+                                <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18" TextColor="#000000" />
                                 <Label Text="{Binding Subtitle}" FontSize="16"/>
                             </StackLayout>
                         </StackLayout>
@@ -23,5 +21,4 @@
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
-
 </ContentPage>

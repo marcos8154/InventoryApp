@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inventory2.ImportProducts"
+             Appearing="ContentPage_Appearing"
+             Title="Import Products">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="10">
+                <!-- Progress Bar -->
+                <ProgressBar x:Name="progress" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+
+                <!-- File Label -->
+                <Label x:Name="lbRemained" 
+                       Text="No file was selected yet" 
+                       HorizontalOptions="FillAndExpand" 
+                       HorizontalTextAlignment="Center" 
+                       TextColor="#3C3C3C"
+                       FontAttributes="Bold"
+                       Margin="0,0,0,10"/>
+
+                <!-- Open File Button -->
+                <Button x:Name="btnOpenF" 
+                        Clicked="btnOpenF_Clicked" 
+                        Text="OPEN FILE" 
+                        BackgroundColor="#397BAE"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        Margin="0,0,0,10"/>
+
+                <!-- Instruction Label -->
+                <Label Text="Associate the parameters with the table's data"
+                       HorizontalOptions="Center" 
+                       HorizontalTextAlignment="Center" 
+                       TextColor="#3C3C3C"
+                       FontAttributes="Bold"
+                       Margin="0,0,0,0"/>
+            </StackLayout>
+            <!-- Scrollable Content -->
+            <ScrollView>
+                <StackLayout Padding="10">
+
+                    <!-- Product ID Picker with border styling -->
+                    <StackLayout Orientation="Vertical" Spacing="5">
+                        <Label Text="Product ID" TextColor="#3C3C3C" FontAttributes="Bold"/>
+                        <Frame CornerRadius="10" Padding="0" HasShadow="False" BorderColor="#CCCCCC">
+                            <Picker x:Name="pkId" Title="Tap here to select" BackgroundColor="Transparent" />
+                        </Frame>
+                    </StackLayout>
+
+                    <!-- Product Description Picker with border styling -->
+                    <StackLayout Orientation="Vertical" Spacing="5">
+                        <Label Text="Product Description" TextColor="#3C3C3C" FontAttributes="Bold"/>
+                        <Frame CornerRadius="10" Padding="0" HasShadow="False" BorderColor="#CCCCCC">
+                            <Picker x:Name="pkDescription" Title="Tap here to select" BackgroundColor="Transparent" />
+                        </Frame>
+                    </StackLayout>
+
+                    <!-- Product SKU Picker with border styling -->
+                    <StackLayout Orientation="Vertical" Spacing="5">
+                        <Label Text="Product SKU" TextColor="#3C3C3C" FontAttributes="Bold"/>
+                        <Frame CornerRadius="10" Padding="0" HasShadow="False" BorderColor="#CCCCCC">
+                            <Picker x:Name="pkSKU" Title="Tap here to select" BackgroundColor="Transparent" />
+                        </Frame>
+                    </StackLayout>
+
+                    <!-- Product EAN Picker with border styling -->
+                    <StackLayout Orientation="Vertical" Spacing="5">
+                        <Label Text="Product EAN" TextColor="#3C3C3C" FontAttributes="Bold"/>
+                        <Frame CornerRadius="10" Padding="0" HasShadow="False" BorderColor="#CCCCCC">
+                            <Picker x:Name="pkEAN" Title="Tap here to select" BackgroundColor="Transparent" />
+                        </Frame>
+                    </StackLayout>
+
+                    <!-- Product Warehouse Picker with border styling -->
+                    <StackLayout Orientation="Vertical" Spacing="5">
+                        <Label Text="Product Warehouse" TextColor="#3C3C3C" FontAttributes="Bold"/>
+                        <Frame CornerRadius="10" Padding="0" HasShadow="False" BorderColor="#CCCCCC">
+                            <Picker x:Name="pkWarehouse" Title="Tap here to select" BackgroundColor="Transparent" />
+                        </Frame>
+                    </StackLayout>
+
+                    <!-- Product Address Picker with border styling -->
+                    <StackLayout Orientation="Vertical" Spacing="5">
+                        <Label Text="Product Address" TextColor="#3C3C3C" FontAttributes="Bold"/>
+                        <Frame CornerRadius="10" Padding="0" HasShadow="False" BorderColor="#CCCCCC">
+                            <Picker x:Name="pkAddress" Title="Tap here to select" BackgroundColor="Transparent" />
+                        </Frame>
+                    </StackLayout>
+
+                    <!-- Save Button -->
+                    <Button x:Name="btnSave" 
+                    Clicked="btnSave_Clicked" 
+                    Text="SAVE" 
+                    BackgroundColor="#397BAE"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Margin="0,20,0,0"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
